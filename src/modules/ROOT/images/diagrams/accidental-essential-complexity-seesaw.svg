@@ -1,16 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="386px" height="143px" viewBox="-16.5 -0.5 386 143">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="386px" height="143px" viewBox="-16.5 -0.5 386 143">
     <title>A seesaw balancing essential complexity against accidental complexity</title>
-    <defs/>
     <g>
-        <path d="M 156 142 L 176 92 L 196 142 Z" fill="var(--base-page, #ffffff)" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" pointer-events="all"/>
-        <rect x="16" y="82" width="320" height="10" fill="currentColor" stroke="none" transform="rotate(-15,176,87)" pointer-events="all"/>
+        <path d="M 156 142 L 176 92 L 196 142 Z" fill="var(--base-page, #ffffff)" stroke="currentColor" stroke-width="2"/>
+        <rect x="16" y="82" width="320" height="10" fill="currentColor" stroke="none" transform="rotate(-15,176,87)"/>
         <text x="36" y="87" text-anchor="middle" dominant-baseline="central" font-size="14" font-family="inherit" font-weight="bold" fill="currentColor">
             <tspan x="36" dy="-8">Essential</tspan>
-            <tspan x="36" dy="17">complexity</tspan>
+            <tspan x="36" dy="16">Complexity</tspan>
         </text>
         <text x="316" y="17" text-anchor="middle" dominant-baseline="central" font-size="14" font-family="inherit" font-weight="bold" fill="currentColor">
             <tspan x="316" dy="-8">Accidental</tspan>
-            <tspan x="316" dy="17">complexity</tspan>
+            <tspan x="316" dy="16">Complexity</tspan>
         </text>
     </g>
 </svg>

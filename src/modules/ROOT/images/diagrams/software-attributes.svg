@@ -1,14 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="393px" height="102px" viewBox="-0.5 -0.5 393 102">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="393px" height="102px" viewBox="-0.5 -0.5 393 102">
     <title>The concerns of software development — operations and constraints above the features/design divide, quality below it</title>
-    <defs/>
     <g>
-        <rect x="1" y="1" width="120" height="40" fill="var(--base-page, #ffffff)" stroke="currentColor" stroke-width="2" pointer-events="all"/>
+        <rect x="1" y="1" width="120" height="40" fill="var(--base-page, #ffffff)" stroke="currentColor" stroke-width="2"/>
         <text x="61" y="21" text-anchor="middle" dominant-baseline="central" font-size="14" font-family="inherit" font-weight="bold" fill="currentColor">Operations</text>
         <text x="322" y="21" text-anchor="middle" dominant-baseline="central" font-size="14" font-family="inherit" font-weight="bold" fill="currentColor">Features</text>
-        <path d="M 361 50 L 1 50" fill="none" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-dasharray="2 4" pointer-events="stroke"/>
-        <rect x="1" y="61" width="250" height="40" fill="var(--base-page, #ffffff)" stroke="currentColor" stroke-width="2" pointer-events="all"/>
+        <path d="M 361 50 L 1 50" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="2 4"/>
+        <rect x="1" y="61" width="250" height="40" fill="var(--base-page, #ffffff)" stroke="currentColor" stroke-width="2"/>
         <text x="126" y="81" text-anchor="middle" dominant-baseline="central" font-size="14" font-family="inherit" font-weight="bold" fill="currentColor">Quality</text>
-        <rect x="131" y="1" width="120" height="40" fill="var(--base-page, #ffffff)" stroke="currentColor" stroke-width="2" pointer-events="all"/>
+        <rect x="131" y="1" width="120" height="40" fill="var(--base-page, #ffffff)" stroke="currentColor" stroke-width="2"/>
         <text x="191" y="21" text-anchor="middle" dominant-baseline="central" font-size="14" font-family="inherit" font-weight="bold" fill="currentColor">Constraints</text>
         <text x="322" y="81" text-anchor="middle" dominant-baseline="central" font-size="14" font-family="inherit" font-weight="bold" fill="currentColor">Design</text>
     </g>
