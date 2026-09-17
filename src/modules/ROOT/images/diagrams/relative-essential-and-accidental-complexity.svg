@@ -1,29 +1,29 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="269px" height="262px" viewBox="-0.5 -0.5 269 262">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="320px" height="312px" viewBox="-0.5 -0.5 320 312">
     <title>Two boxes, each labelled with one kind of complexity and containing a smaller box labelled with the other</title>
     <defs/>
     <g>
-        <rect x="1" y="1" width="120" height="120" fill="var(--base-page, #ffffff)" stroke="currentColor" stroke-width="2" pointer-events="all"/>
-        <text x="61" y="16" text-anchor="middle" dominant-baseline="hanging" font-size="14" font-family="inherit" font-weight="bold" fill="currentColor">
-            <tspan x="61" dy="0">Essential</tspan>
-            <tspan x="61" dy="16">Complexity</tspan>
+        <rect x="1" y="1" width="143" height="143" fill="var(--base-page, #ffffff)" stroke="currentColor" stroke-width="2" pointer-events="all"/>
+        <text x="72" y="19" text-anchor="middle" dominant-baseline="hanging" font-size="14" font-family="inherit" font-weight="bold" fill="currentColor">
+            <tspan x="72" dy="0">Essential</tspan>
+            <tspan x="72" dy="16">Complexity</tspan>
         </text>
-        <rect x="71" y="71" width="40" height="40" fill="currentColor" stroke="currentColor" pointer-events="all"/>
-        <path d="M 161 91 L 111 91" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-dasharray="1 2" pointer-events="stroke"/>
-        <text x="201" y="91" text-anchor="middle" dominant-baseline="central" font-size="14" font-family="inherit" font-weight="bold" fill="currentColor">
-            <tspan x="201" dy="-8">Accidental</tspan>
-            <tspan x="201" dy="16">Complexity</tspan>
+        <rect x="84" y="84" width="48" height="48" fill="currentColor" stroke="currentColor" pointer-events="all"/>
+        <path d="M 191 108 L 132 108" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-dasharray="1 2" pointer-events="stroke"/>
+        <text x="239" y="108" text-anchor="middle" dominant-baseline="central" font-size="14" font-family="inherit" font-weight="bold" fill="currentColor">
+            <tspan x="239" dy="-8">Accidental</tspan>
+            <tspan x="239" dy="16">Complexity</tspan>
         </text>
-        <rect x="1" y="141" width="120" height="120" fill="currentColor" stroke="currentColor" stroke-width="2" pointer-events="all"/>
-        <text x="61" y="156" text-anchor="middle" dominant-baseline="hanging" font-size="14" font-family="inherit" font-weight="bold" fill="var(--base-page, #ffffff)">
-            <tspan x="61" dy="0">Accidental</tspan>
-            <tspan x="61" dy="16">Complexity</tspan>
+        <rect x="1" y="168" width="143" height="143" fill="currentColor" stroke="currentColor" stroke-width="2" pointer-events="all"/>
+        <text x="72" y="186" text-anchor="middle" dominant-baseline="hanging" font-size="14" font-family="inherit" font-weight="bold" fill="var(--base-page, #ffffff)">
+            <tspan x="72" dy="0">Accidental</tspan>
+            <tspan x="72" dy="16">Complexity</tspan>
         </text>
-        <rect x="71" y="211" width="40" height="40" fill="var(--base-page, #ffffff)" stroke="currentColor" pointer-events="all"/>
-        <path d="M 161 231 L 121 231" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-dasharray="1 2" pointer-events="stroke"/>
-        <text x="201" y="231" text-anchor="middle" dominant-baseline="central" font-size="14" font-family="inherit" font-weight="bold" fill="currentColor">
-            <tspan x="201" dy="-8">Essential</tspan>
-            <tspan x="201" dy="16">Complexity</tspan>
+        <rect x="84" y="251" width="48" height="48" fill="var(--base-page, #ffffff)" stroke="currentColor" pointer-events="all"/>
+        <path d="M 191 275 L 144 275" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-dasharray="1 2" pointer-events="stroke"/>
+        <text x="239" y="275" text-anchor="middle" dominant-baseline="central" font-size="14" font-family="inherit" font-weight="bold" fill="currentColor">
+            <tspan x="239" dy="-8">Essential</tspan>
+            <tspan x="239" dy="16">Complexity</tspan>
         </text>
-        <path d="M 121 231 L 111 231" fill="none" stroke="var(--base-page, #ffffff)" stroke-miterlimit="10" stroke-dasharray="1 2" pointer-events="stroke"/>
+        <path d="M 144 275 L 132 275" fill="none" stroke="var(--base-page, #ffffff)" stroke-miterlimit="10" stroke-dasharray="1 2" pointer-events="stroke"/>
     </g>
 </svg>
