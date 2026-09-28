@@ -4,6 +4,8 @@
 :docinfo: shared
 :nofooter:
 
+Occasional essays on the craft of software engineering, the state of the art, its history, and future.
+
 * xref:reverse-interviews.adoc[Reverse interviews] +
   [.small]#24 June 2026#
 
