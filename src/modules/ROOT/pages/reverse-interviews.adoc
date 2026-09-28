@@ -17,7 +17,7 @@ Let's be honest. Working in software is a somewhat _variable_ experience.
 Working at a small startup feels very different from working at a large global
 firm, and working at a software house feels very different from working at a
 consultancy practice that serves non-IT customers. Even within those
-sub-sectors, the culture and ways of working vary enormously.
+sub-sectors, the culture and xref:garden::ways-of-working.adoc[ways of working] vary enormously.
 
 When you're applying for a new role, unless you already have inside knowledge of
 the organization you're applying to, you'll need to do background research and
@@ -35,7 +35,7 @@ The trick is to design a series of questions — not too many — that will surf
 both red and green flags.
 
 _Extrinsic_ factors — things like salary and benefits, the tech stack, the
-problem space, the office and the work environment — will be the early filters
+xref:garden::problem-space.adoc[problem space], the office and the work environment — will be the early filters
 for your job funnel. But what will matter more in the long term is the
 organization's culture and values. These will determine what it is actually like
 to work there day-to-day. _Intrinsic_ factors — purpose, autonomy, mastery —
@@ -63,7 +63,7 @@ middle. Most companies are, by definition, average, so honest ratings should
 follow a https://en.wikipedia.org/wiki/Normal_distribution[normal distribution].
 
 Look for code quality signals. Does the organization have any public code
-repositories, or does it make contributions to open source projects? Does it
+xref:garden::repository.adoc[repositories], or does it make contributions to open source projects? Does it
 publish an engineering blog or its in-house technical standards?
 
 Other sources of valuable information can include historical job postings,
@@ -126,7 +126,7 @@ screening and subsequent interview rounds. Look out for these red flags:
   process. That's usually a sign of how you'll be managed once you're hired,
   too.
 
-* Technical questions that are at an inappropriate level of abstraction for the
+* Technical questions that are at an inappropriate level of xref:garden::abstraction.adoc[abstraction] for the
   job role. For example, "`explain how you'd protect against SQL injection`" may
   be appropriate if you'll be expected to write lots of custom low-level library
   code, but such knowledge is much less useful to hold in working memory if you
@@ -175,7 +175,7 @@ like:
 On remote and hybrid policy: limited opportunities for remote and async working
 are a red flag in the post-Covid era, often a sign of low trust. There can be
 legitimate reasons for on-site work, such as the nature of the work or high
-security. But most "`collaboration`" can be done very effectively remotely with
+xref:garden::security.adoc[security]. But most "`collaboration`" can be done very effectively remotely with
 modern technology, so if that's their reasoning, you should interrogate it.
 
 If you'll be on-site, consider the physical environment. Is the office a nice
@@ -233,7 +233,7 @@ long you'll stay in the end.
 Below, I've listed example questions under thirteen possible topics:
 
 * The product
-* Requirements specification
+* xref:garden::requirement.adoc[Requirements] specification
 * Planning and prioritization
 * Estimation
 * Architecture
@@ -241,7 +241,7 @@ Below, I've listed example questions under thirteen possible topics:
 * Process and ceremonies
 * Engineering practices
 * Communication and autonomy
-* Testing
+* xref:garden::testing.adoc[Testing]
 * Delivery automation
 * Operations and maintenance
 * Culture and values
@@ -295,10 +295,10 @@ How an organization handles requirements tells you whether it builds for users
 or just churns out features.
 
 * **"`Where do functional requirements come from? How are those requirements specified?`"**
-  Look for the business to define high-level acceptance criteria from the
+  Look for the business to define high-level xref:garden::acceptance-criteria.adoc[acceptance criteria] from the
   perspective of the software's users. Product owners or other non-technical
-  staff should not be programming the solution by remote control through user
-  stories or, worse, task lists. Look for a clear division of labor between
+  staff should not be programming the solution by remote control through
+xref:garden::user-story.adoc[user stories] or, worse, task lists. Look for a clear division of labor between
   product and engineering. If there isn't one, suspect a
   https://medium.com/@johnpcutler/12-signs-youre-working-in-a-feature-factory-44a5b938d6a2[feature factory].
 
@@ -327,12 +327,12 @@ tactical, short-term fixes.
   its engineering teams to plan their own work.
 
 * **"`Are your requirements stable or volatile? How do you manage change requests (scope creep)?`"**
-  Volatility in requirements (ie. scope creep) is a perfectly natural phenomenon
+  Volatility in requirements (ie. xref:garden::scope-creep.adoc[scope creep]) is a perfectly natural phenomenon
   in almost all software projects. A mature software organization will account
   for this in its delivery planning.
 
 * **"`How is technical debt and refactoring prioritized against feature delivery? How is time for it factored into the process?`"**
-  If technical debt is "`dealt with when we have time`", you can assume it never
+  If xref:garden::technical-debt.adoc[technical debt] is "`dealt with when we have time`", you can assume it never
   gets dealt with. That's a red flag for the long-term health of the codebase,
   and your day-to-day experience working in it.
 
@@ -386,15 +386,15 @@ the team understands and can talk about the system they're building.
 
 * **"`Could you describe the high-level architecture of the system, conceptually?`"**
   The answer to this question can be revealing of the organization itself, not
-  only the software system. Systems mirror the organizations that build them – a
+  only the xref:garden::software-system.adoc[software system]. Systems mirror the organizations that build them – a
   phenomenon known as
   https://web.archive.org/web/20190929004831/http://www.melconway.com/Home/Conways_Law.html[Conway's Law].
-  So, a tightly-coupled distributed monolith suggests a highly centralized,
+  So, a tightly-coupled distributed xref:garden::monolith.adoc[monolith] suggests a highly centralized,
   top-down organization, while a loosely-coupled services-oriented architecture
   suggests a decentralized organization composed of highly autonomous teams.
 
 * **"`Has the system maintained good conceptual integrity over time, even as the architecture has evolved?`"**
-  If the architecture has good conceptual integrity, the team should be able to
+  If the architecture has good xref:garden::conceptual-integrity.adoc[conceptual integrity], the team should be able to
   describe it without discussing implementation details — no mention of the
   technology stack or infrastructure.
 
@@ -402,7 +402,7 @@ the team understands and can talk about the system they're building.
   An honest, specific answer suggests self-awareness about the architecture's
   weaknesses. "`Nothing, it's great`" suggests a very young system (fine), an
   interviewer who isn't close enough to the code to know (also fine), or a
-  misplaced belief that no trade-offs have been made in the system design (not
+  misplaced belief that no xref:garden::trade-off.adoc[trade-offs] have been made in the xref:garden::system-design.adoc[system design] (not
   fine).
 
 * **"`How do you communicate design ideas?`"** Look for lightweight, written
@@ -462,7 +462,7 @@ rigid sequence of hand-offs between specialists.
   onto developers under time pressure.
 
 * **"`Do requirements, design, build, and test happen in separate phases, or together?`"**
-  Separate phases handed off between specialists is a stepwise, waterfall-style
+  Separate phases handed off between specialists is a xref:garden::waterfall-model.adoc[stepwise], waterfall-style
   process. The alternative, shifting everything left so the same people are
   involved throughout, catches problems earlier and is the healthier sign.
 
@@ -499,7 +499,7 @@ developers help define the scope of stories.
   reasons why they tried but it didn't work for them.
 
 * **"`How long do feature branches stay open? Is anyone allowed to commit directly to the trunk?`"**
-  Branches open for weeks suggest infrequent integration and a higher risk of
+  Branches open for weeks suggest infrequent integration and a higher xref:garden::risk.adoc[risk] of
   painful merges — the opposite of the fast feedback loops good delivery
   practice depends on.
 
@@ -563,12 +563,12 @@ bolted on at the end.
   test format.
 
 * **"`What other testing do you do — penetration, load, usability?`"** The other
-  types of tests verify cross-functional, non-functional requirements, and in
+  types of tests verify cross-functional, xref:garden::non-functional-requirements.adoc[non-functional requirements], and in
   most systems they deserve the same level of automation as functional tests –
   but this is often a noticeable gap in coverage.
 
 * **"`How much manual testing happens before each release?`"** Heavy reliance on
-  manual testing before every release is a sign the automated suite isn't
+  xref:garden::manual-testing.adoc[manual testing] before every release is a sign the automated suite isn't
   trusted, which slows delivery and increases risk at the same time.
 
 * **"`Do you have dedicated QA, or is quality everyone's job?`"** Either answer
@@ -614,7 +614,7 @@ infrequent, high-stakes releases.
 * **"`How often do you ship to production? How often does a release cause problems in production?`"**
   High performing teams ship frequently with few subsequent failures in
   production. An organization that can't answer either question isn't measuring
-  its own delivery performance.
+  its own delivery xref:garden::performance.adoc[performance].
 
 * **"`What are your pain points? What's the biggest challenge facing delivery right now? What needs improving most?`"**
   A specific, self-critical answer is a good sign.
@@ -628,7 +628,7 @@ infrequent, high-stakes releases.
 === Operations and maintenance
 
 These questions probe what happens after software ships — how much of the
-on-call and firefighting burden falls on developers, and how well the
+xref:garden::on-call.adoc[on-call] and firefighting burden falls on developers, and how well the
 organization supports them when things go wrong.
 
 * **"`How are production services operated? First-line support? Out-of-hours support?`"**
@@ -637,7 +637,7 @@ organization supports them when things go wrong.
   job.
 
 * **"`How quickly do you recover from production incidents? What's your monitoring and observability like? How are incidents managed?`"**
-  Slow recovery and poor observability mean every incident becomes a stressful,
+  Slow recovery and poor xref:garden::observability.adoc[observability] mean every incident becomes a stressful,
   drawn-out firefight rather than a routine, well-supported response.
 
 * **"`What keeps you up at night?`"** An honest, specific worry is a good sign
@@ -658,7 +658,7 @@ This is probably the most important consideration. It will determine whether you
 enjoy the job and how long you stay.
 
 Look for continuous learning, a blameless culture (psychological safety),
-investment in quality, collaboration with domain experts, and knowledge sharing
+investment in quality, collaboration with xref:garden::domain-expert.adoc[domain experts], and knowledge sharing
 rather than silos. In short, you want autonomy, mastery, and purpose.
 
 * Get straight to the point:
@@ -679,7 +679,7 @@ rather than silos. In short, you want autonomy, mastery, and purpose.
   worth probing further.
 
 * **"`How do you handle a greenfield project where nobody yet knows exactly what's being built?`"**
-  Software development is fundamentally a process of discovery, experimentation,
+  Software development is fundamentally a process of xref:garden::discovery.adoc[discovery], experimentation,
   and adjustment based on feedback, not just execution of a known plan. An
   organization uncomfortable with that uncertainty will tend toward rigid,
   predictive processes that don't fit the nature of the work.
@@ -716,7 +716,7 @@ The green flags are just as important as the red ones. You're looking for:
 * A strong culture of quality, with tech debt actively managed.
 * Evergreen http://www.extremeprogramming.org/[extreme programming] practices,
   especially robust QA.
-* Self-organizing, cross-functional teams.
+* Self-organizing, xref:garden::cross-functional-team.adoc[cross-functional teams].
 * Shifting everything left. Not a stepwise workflow.
 * Room for mentoring and personal growth.
 * A real commitment to work-life balance.

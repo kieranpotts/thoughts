@@ -26,23 +26,23 @@ Kieran Potts, 24 May 2021
 :link-blogcast:        https://anchor.fm/blog-cast/episodes/Ep3-Kieran-Potts-Should-we-rebrand-REST-e12g3bi
 :link-infoq-china:     https://www.infoq.cn/article/XvBXPx8YXTySt3TFMvdi
 
-In this blog post I argue the case for consigning the term "REST API" to
-history. In its place we should adopt the terms "HTTP API" and "hypermedia API",
+In this blog post I argue the case for consigning the term "xref:garden::rest.adoc[REST] API" to
+history. In its place we should adopt the terms "xref:garden::http-api.adoc[HTTP API]" and "hypermedia API",
 which better differentiate two distinctive designs for the programmatic
-interfaces of web services.
+xref:garden::interface.adoc[interfaces] of web xref:garden::service.adoc[services].
 
 Imagine you've been tasked with the problem of designing the API for a new web
 service.
 
 Where would you start?
 
-At a high level, you'll want to consider which general style of API (REST, RPC,
-graph, etc.) will be the best-fit for your application's business domain. You'll
+At a high level, you'll want to consider which general style of API (REST, xref:garden::remote-procedure-call.adoc[RPC],
+graph, etc.) will be the best-fit for your application's business xref:garden::domain.adoc[domain]. You'll
 want to settle on a transport protocol (which will probably be HTTP but you
-might consider WebSocket, or both). And you'll need to choose between a medley
-of generic serialization standards (JSON and XML lead the field here) or you
-might opt for a specialist messaging protocol with plain text (SOAP, OData,
-GraphQL) or binary message encoding (Thrift, Avro, Protocol Buffers).
+might consider xref:garden::websockets.adoc[WebSocket], or both). And you'll need to choose between a medley
+of generic serialization standards (xref:garden::json.adoc[JSON] and XML lead the field here) or you
+might opt for a specialist xref:garden::messaging-protocol.adoc[messaging protocol] with plain text (SOAP, OData,
+xref:garden::graphql.adoc[GraphQL]) or binary message encoding (Thrift, Avro, xref:garden::protocol-buffers.adoc[Protocol Buffers]).
 
 All that before you even start to think about modelling your application's
 business domain.
@@ -67,7 +67,7 @@ REST architectural style is said to be "RESTful".
 
 Unlike SOAP, GraphQL, OData and most other web service API solutions, REST is
 not a protocol or even a standard of any kind. Rather, REST is an architectural
-style, or a set of lofty design constraints.
+style, or a set of lofty design xref:garden::constraint.adoc[constraints].
 
 REST was christened by computer scientist Roy Fielding in his {link-thesis}[PhD
 thesis], published at the turn of the century. But that dissertation is not much
@@ -96,10 +96,10 @@ that meet all the constraints.
 The foundation architecture for a RESTful system is the client-server model.
 Clients run in separate processes from servers and there must be a sufficient
 degree of logical separation such that clients are not concerned with business
-logic and data storage, and servers are not concerned with the user interface or
-its state.
+logic and data storage, and servers are not concerned with the xref:garden::user-interface.adoc[user interface] or
+its xref:garden::state.adoc[state].
 
-This logical and physical separation of concerns makes client applications more
+This logical and physical xref:garden::separation-of-concerns.adoc[separation of concerns] makes client applications more
 portable across multiple software platforms, and server applications become
 simpler. It also means that servers and clients can be developed, maintained and
 even fully replaced independently of one another, as long as the programmatic
@@ -108,7 +108,7 @@ interfaces between the two remain stable.
 === 2. Statelessness
 
 The second constraint of REST is that all interactions between client and server
-must be stateless.
+must be xref:garden::stateless.adoc[stateless].
 
 This means that all the application state (aka. session state or extrinsic
 state) necessary for a server to handle a client's request is contained within
@@ -121,8 +121,8 @@ Stateless systems are hugely scalable. That's because servers have less data to
 store, they can more quickly free-up resources after fulfilling a client
 request, and they have more scope to process requests in parallel.
 
-Furthermore, monitoring is easier (because you don't need a chronological
-history of requests to reproduce a client's state) and reliability can be
+Furthermore, xref:garden::monitoring.adoc[monitoring] is easier (because you don't need a chronological
+history of requests to reproduce a client's state) and xref:garden::reliability.adoc[reliability] can be
 improved (because there are more options to design a system for recovery from
 failures when that system is stateless).
 
@@ -134,19 +134,19 @@ browsers, which runs a sort of "undo" operation on previous state transitions.
 
 === 3. Cache-ability
 
-Another advantage of a stateless client-server architecture is that response
+Another advantage of a stateless xref:garden::client-server-architecture.adoc[client-server architecture] is that response
 messages become more generic and so more of those messages can be shared among
-multiple clients, so increasing the potential for server-side caching of
+multiple clients, so increasing the potential for server-side xref:garden::caching.adoc[caching] of
 responses. Specialist intermediary servers can be introduced to handle response
-caching, keeping this cross-cutting concern separate from the business logic on
+caching, keeping this xref:garden::cross-cutting-concern.adoc[cross-cutting concern] separate from the business logic on
 the end server.
 
 Furthermore, the REST style encourages servers to indicate to clients whether
 resources can be locally cached, too. Clients are encouraged to store and reuse
 cache-able responses wherever practical, and they are discouraged from using
 stale and invalid data. Client-side caching of the server's resources reduces
-the overall volume of client-server traffic, further improving the scalability
-of the server and the performance of the client.
+the overall volume of client-server traffic, further improving the xref:garden::scalability.adoc[scalability]
+of the server and the xref:garden::performance.adoc[performance] of the client.
 
 === 4. Uniform interface
 
@@ -154,10 +154,10 @@ The REST architectural style requires client and server to communicate through a
 consistent interface, which should be as generic as possible. The prerequisites
 for achieving a "uniform interface" are the following design constraints:
 
-* *Resource-based APIs*: The main abstraction of information in REST is a
+* *Resource-based APIs*: The main xref:garden::abstraction.adoc[abstraction] of information in REST is a
   resource. Any information that can be named can be a resource. A resource
-  might be a virtual object such as a digital document or image, or a data
-  structure representing attributes of a real-world thing such as a person or
+  might be a virtual object such as a digital document or image, or a
+xref:garden::data-structure.adoc[data structure] representing attributes of a real-world thing such as a person or
   location. Whatever their nature, all resources must be identifiable using a
   universal system of unique identifiers.
 
@@ -165,7 +165,7 @@ for achieving a "uniform interface" are the following design constraints:
   direct access to resources in their native format in order to be able to make
   changes to them. REST allows clients to create, manipulate, and even delete
   resources by using partial _representations_ of those resources. For example,
-  a data entity persisted in a server-side database will be encoded within
+  a data xref:garden::entity.adoc[entity] persisted in a server-side xref:garden::database.adoc[database] will be encoded within
   client-server messages in a different format to the original.
 
 * *Self-descriptive messages*: Request and response messages must contain all
@@ -191,7 +191,7 @@ for achieving a "uniform interface" are the following design constraints:
   actions from the given list of available hypermedia controls. Thus, although
   clients persist their own application state, it is the server that drives all
   changes to that downstream state. This design has the effect of further
-  decoupling clients from servers, since client applications require no
+  xref:garden::decoupling.adoc[decoupling] clients from servers, since client applications require no
   hard-coded knowledge of their servers' available resources and operations.
 
 === 5. Layered system
@@ -199,11 +199,11 @@ for achieving a "uniform interface" are the following design constraints:
 In terms of the practicalities of provisioning infrastructure, REST prescribes a
 layered solution. A RESTful system should be able to accommodate the
 introduction of intermediary servers, to expand scale when needed. For example,
-intermediary servers may be used to enable load balancing or to provide shared
+intermediary servers may be used to enable xref:garden::load-balancing.adoc[load balancing] or to provide shared
 caches. Intermediary servers can act as proxies for the back-end servers, and
 gateway servers can compose responses by gathering data from multiple specialist
 back-end services. Yet other layers can be introduced to focus on cross-cutting
-concerns such as the implementation of security policies and logging.
+concerns such as the implementation of xref:garden::security.adoc[security] policies and xref:garden::logging.adoc[logging].
 
 The stateless nature of REST's client-server model makes it possible to scale
 server-side infrastructure both horizontally and vertically. But to maintain
@@ -221,7 +221,7 @@ transferring additional program code to them at runtime, which the clients can
 then execute.
 
 The idea is that, if new features can be downloaded to clients _after_
-deployment of those clients, the system as a whole becomes more rapidly
+xref:garden::deployment.adoc[deployment] of those clients, the system as a whole becomes more rapidly
 extensible.
 
 == REST is for distributed information systems
@@ -284,16 +284,16 @@ were formulated, it all seems so obvious now:
    self-descriptive. The HyperText Markup Language (HTML) is a hypermedia
    content type designed specifically for the web. With its embedded hypermedia
    controls (links and forms) that are used to drive application state changes,
-   HTML meets all the other requirements of REST's *uniform interface*.
+   HTML meets all the other xref:garden::requirement.adoc[requirements] of REST's *uniform interface*.
 
 5. The *layering* of server-side web infrastructure – API Gateways backed by
-   service-oriented "microservice" architecture; Content Delivery Networks and
+   service-oriented "xref:garden::microservices.adoc[microservice]" architecture; xref:garden::content-delivery-network.adoc[Content Delivery Networks] and
    other load balancing solutions; and so on – is all pretty standard stuff
    nowadays.
 
 6. And the optional constraint of *code-on-demand* prescribes what today we call
    progressive enhancement – the discretionary extension of static HTML
-   documents with JavaScript programs that are downloaded and executed on the
+   documents with xref:garden::javascript.adoc[JavaScript] programs that are downloaded and executed on the
    client device.
 
 Even the weird name – Representational State Transfer – starts to make sense,
@@ -305,7 +305,7 @@ a well-designed Web application behaves: a network of web pages (a virtual
 state-machine), where the user progresses through the application by selecting
 links (state transitions), resulting in the next page (representing the next
 state of the application) being transferred to the user and rendered for their
-use case.
+xref:garden::use-case.adoc[use case].
 
 Fielding's intention in writing his thesis was to distill down the World Wide
 Web to a "core set of principles, properties and constraints" that get to the
@@ -392,7 +392,7 @@ REST with the semantics of HTTP.
 
 In a {link-fielding-2008}[2008 blog post], Fielding reprimanded organizations
 for using the term "REST API" as an alias for "HTTP API" in their technical
-documentation. He clarified:
+xref:garden::documentation.adoc[documentation]. He clarified:
 
 [quote,Roy Fielding]
 … if the engine of application state (and hence the API) is not being driven by
@@ -417,7 +417,7 @@ I will try to summarize how a theoretical hypermedia API would work. I say
 _theoretical_ because, as of 2021, hypermedia APIs are not yet a reality outside
 of academic circles.
 
-The hypermedia APIs of the future would be consumed by automated agents in much
+The hypermedia APIs of the future would be consumed by automated xref:garden::agent.adoc[agents] in much
 the same way that humans today interact with web sites. People discover all the
 available resources and functions of a web site by visiting its home page and
 clicking through the links and filling out the forms, following instructions
@@ -449,7 +449,7 @@ common grammar, could become a reality.
 
 Since the client applications will not be written to a static interface, the
 APIs themselves will be free to change shape dynamically, responding to user
-input, algorithms, and even artificial intelligence. And it would be easier to
+input, xref:garden::algorithm.adoc[algorithms], and even xref:garden::artificial-intelligence.adoc[artificial intelligence]. And it would be easier to
 incrementally evolve an API's design, with fewer problems associated with
 breaking changes and versioning.
 
@@ -476,11 +476,11 @@ What we call today "REST APIs" we should reclassify as either "HTTP APIs" or
 *HTTP APIs* are designed around HTTP. These web services closely follow best
 practices for composition of HTTP request and response messages, as set out in
 the HTTP specifications. They make good use of HTTP's native features for cache
-control, content negotiation, and authentication. Their endpoints are more
+control, content negotiation, and xref:garden::authentication.adoc[authentication]. Their endpoints are more
 resource-oriented than RPC-style. For their media types, they prefer simple,
 general-purpose, plain text encoding formats like JSON and XML. They will
 typically be versioned and their static interfaces will probably be documented
-in {link-openapi}[OpenAPI] or other popular IDL conventions. More generally,
+in {link-openapi}[OpenAPI] or other popular xref:garden::interface-definition-language.adoc[IDL] conventions. More generally,
 HTTP APIs err on the side of lightweight solutions, shunning state-of-the-art
 code generation and other automated tooling. As such they are ideal for delivery
 of commercial services intended for integration in third party applications.
@@ -488,13 +488,13 @@ of commercial services intended for integration in third party applications.
 Importantly, HTTP APIs use HTTP not merely as a data transport mechanism, but as
 a full-blown application protocol. They will make extensive use of HTTP's native
 features and messaging semantics. This is what sets apart HTTP APIs from SOAP,
-OData, GraphQL, gRPC and countless other web service protocols that happen to
+OData, GraphQL, xref:garden::grpc.adoc[gRPC] and countless other web service protocols that happen to
 use HTTP for transport but otherwise largely hide HTTP details from API
 consumers.
 
 *Hypermedia APIs* are a newly-emerging category of web services that incorporate
 a linked data model and borrow from established vocabularies to describe all
-their resources and operations. (They may devise domain-specific ontologies but
+their resources and operations. (They may devise domain-specific xref:garden::ontology.adoc[ontologies] but
 only to fill-in the gaps in the preeminent general-purpose vocabularies.) Since
 their interfaces would be fully defined in-band, they would not need
 conventional static API documentation. The very best of these APIs would be
@@ -511,7 +511,7 @@ conventions, but rather they will make possible entirely new categories of data
 services that don't exist today. Watch this space.
 
 As for *REST*, this should be treated as a pretty niche concept within the field
-of computer science. Its intended use cases are very narrow indeed.
+of xref:garden::computer-science.adoc[computer science]. Its intended use cases are very narrow indeed.
 
 [quote,Roy Fielding]
 REST is intended for long-lived network-based applications that span multiple

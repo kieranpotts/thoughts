@@ -5,7 +5,7 @@ Kieran Potts, 28 December 2025
 :nofooter:
 
 https://en.wikipedia.org/wiki/Fred_Brooks[Frederick P Brooks Jr's] classic book
-_The Mythical Man-Month: Essays on Software Engineering_ was published in 1975 –
+_xref:garden::mythical-man-month.adoc[The Mythical Man-Month]: Essays on Software Engineering_ was published in 1975 –
 50 years ago. The book introduced many ideas and principles that were hugely
 influential on early practitioners of our craft. But which ideas have withstood
 half a century of technological change, and which have not?
@@ -21,7 +21,7 @@ _The Mythical Man-Month_ is more of an anthology of standalone essays rather
 than a cohesive thesis. Nevertheless, there are some key themes that run
 throughout. The most prominent theme is the one introduced in the opening
 chapter: that the core challenge of software development is the management of
-complexity.
+xref:garden::complexity.adoc[complexity].
 
 Brooks draws the colorful analogy that large-scale software development is like
 "`the mortal struggles of great beasts in the tar pits`". This is represented by
@@ -38,7 +38,7 @@ move complex projects forward.
 "`No one thing seems to cause the difficulty – any particular paw can be pulled away. But the accumulation of simultaneous and interacting factors brings slower and slower motion.`"
 
 Despite the immense technological advances of the past half-century – in
-computer hardware, in programming languages and runtime environments, and in
+computer xref:garden::hardware.adoc[hardware], in programming languages and runtime environments, and in
 tools and automation that support every aspect of software delivery – the core
 challenge of software development remains the management of complexity.
 
@@ -56,22 +56,22 @@ initial release of OS/360, in 1966, was delivered
 
 The opening chapter serves as Brooks's post-mortem of the OS/360 project. He
 concludes that the fundamental reason for the project's difficulties was that
-the overall costs of delivering such a large-scale software system had been
+the overall costs of delivering such a large-scale xref:garden::software-system.adoc[software system] had been
 massively underestimated from the start. This happened because the estimates
 were based solely on the construction of the individual parts of the system.
 What had not been accounted for was the integration costs of all those
-components, and the "`productization`" of the whole solution.
+xref:garden::component.adoc[components], and the "`productization`" of the whole solution.
 
-Brooks estimates that the work of designing the interfaces between all the
+Brooks estimates that the work of designing the xref:garden::interface.adoc[interfaces] between all the
 components of a system, coordinating their integration, and incrementally
 extending integration tests, has the potential to triple the initial cost of
 coding all the components in isolation. Costs may triple again for all the work
 that goes into preparing a large-scale software system for distribution as
 shrink-wrapped software for general use by the public. For the OS/360 project,
-they had not fully accounted for how much extra rework and testing would be
+they had not fully accounted for how much extra rework and xref:garden::testing.adoc[testing] would be
 needed to make the system run reliably in
 "`many operating environments, for many sets of data`", and for time spent
-preparing user-facing documentation and other packaging.
+preparing user-facing xref:garden::documentation.adoc[documentation] and other packaging.
 
 Brooks estimates that, in total, building large, general-purpose, shrink-wrapped
 software products can cost up to nine times (3x3) more than writing all the code
@@ -89,13 +89,13 @@ large-scale commercial software products.
 The eponymous second chapter builds on the thesis of the first chapter. It deals
 with the perennial issue of software projects being notorious for going over
 budget, being delivered later than estimated, else failing to meet expectations
-in functionality and performance.
+in functionality and xref:garden::performance.adoc[performance].
 
 Based on his experience on OS/360, Brooks suggests that the costs of large-scale
 software projects typically break down into approximately one-third for design,
 one-sixth for coding, and half for debugging and testing – split roughly equally
-between component testing (ie. unit and integration testing) and system
-(end-to-end) testing. Unfortunately, Brooks concludes, you cannot estimate the
+between component testing (ie. unit and xref:garden::integration-testing.adoc[integration testing]) and system
+(xref:garden::system-testing.adoc[end-to-end]) testing. Unfortunately, Brooks concludes, you cannot estimate the
 cost of a software project simply by working out the programming effort and then
 multiplying for the other cost factors.
 "`The coding is only one-sixth or so of the problem, and errors in its estimate or in the ratios could lead to ridiculous results.`"
@@ -121,7 +121,7 @@ productivity varies by category of software, too, such as operating systems
 versus compilers, suggesting that complexity is as much a factor as size.
 
 In my experience, we still have a tendency to estimate software development
-costs based primarily on the coding of individual modules, rather than
+costs based primarily on the coding of individual xref:garden::module.adoc[modules], rather than
 considering the integration of those modules into a cohesive system, the size
 and complexity of the whole product, and the work that goes into making a
 software product ready for end users – just as the project managers had failed
@@ -144,7 +144,7 @@ to being wildly optimistic.
 
 I'm not wholly convinced by this argument. Sure, younger developers lack the
 necessary experience to do accurate estimates. But I've found senior developers
-to be just as guilty of optimism bias. Contingency planning and risk management
+to be just as guilty of optimism bias. Contingency planning and xref:garden::risk.adoc[risk] management
 are still poorly practiced in many software projects today – regardless of who's
 drawing up the project plans.
 
@@ -161,7 +161,7 @@ written by other people who are no longer involved in the project.
 
 This I find to be a more convincing argument. Software development is an
 inherently complex and unpredictable activity. In every software project, even
-those with stable and known requirements, there will always be some requirements
+those with stable and known xref:garden::requirement.adoc[requirements], there will always be some requirements
 that are emergent. Requirements may emerge only at the time of construction, or
 even later, when working software is finally put into the hands of real users.
 This is the nature of software development, which is more of a design problem
@@ -173,7 +173,7 @@ as in 1975, the belief that the delivery of complex software can be planned in
 meticulous detail, and costs controlled accordingly, is still widely held
 throughout our industry.
 
-Misplaced optimism in big design up-front remains a common cause of cost
+Misplaced optimism in xref:garden::big-design-up-front.adoc[big design up-front] remains a common cause of cost
 overruns today.
 
 === Progress is not always correlated with effort
@@ -190,7 +190,7 @@ increases total effort. There's extra effort involved in reorganizing the
 project delivery plan and managing the larger team. Meanwhile, in-flight work
 streams are disrupted by the "`repartitioning`" of work. There follows a
 permanent increase in intercommunication, required to coordinate the development
-of dependencies and interfaces, and to manage the integration testing. There's
+of xref:garden::dependency.adoc[dependencies] and interfaces, and to manage the integration testing. There's
 also more time spent training and onboarding new people.
 
 And some programming tasks just cannot be parallelized, but must be done
@@ -291,23 +291,23 @@ is about that last step of integrating and testing a complete system, made from
 its pre-fabricated, pre-tested component parts.
 
 Of course, in the intervening years, our industry has universally adopted
-iterative and incremental development practices. Best practice now is to deliver
+xref:garden::iterative-and-incremental-development.adoc[iterative and incremental development] practices. Best practice now is to deliver
 small chunks of work, fully integrated into and tested within the evolving
 product, at regular intervals. In effect, testing and debugging is now done in
 parallel to design and construction, not sequentially afterward, as it was in
 the past.
 
 Rather than testing being left until a final deliverable system is complete, the
-correctness of the evolving system is continuously evaluated throughout its
-development life cycle. Through this process of continuous integration and
+xref:garden::correctness.adoc[correctness] of the evolving system is continuously evaluated throughout its
+development life cycle. Through this process of xref:garden::continuous-integration.adoc[continuous integration] and
 testing, we've solved the problem of defects in design and construction being
 discovered late.
 
 Brooks acknowledges this himself. In a retrospective chapter in the 20th
 anniversary edition of _The Mythical Man-Month_, Brooks accepts that iterative
 and incremental development methodologies had, in the intervening years, proven
-to be more effective than traditional stepwise approaches. Indeed, in his other
-famous work, _No Silver Bullet_, a paper published in 1986, just a decade after
+to be more effective than traditional xref:garden::waterfall-model.adoc[stepwise] approaches. Indeed, in his other
+famous work, _No xref:garden::silver-bullet.adoc[Silver Bullet]_, a paper published in 1986, just a decade after
 _The Mythical Man-Month_, Brooks advocates "`growing`" software organically
 through incremental development.
 
@@ -355,7 +355,7 @@ commonplace.
 == The surgical team
 
 In the third chapter, Brooks pitches his solution to the problems of large-scale
-software development: the surgical team.
+software development: the xref:garden::surgical-team.adoc[surgical team].
 
 The roots of this idea lie in the observation that having a small number of very
 skilled programmers on a team often proves to be more effective than having a
@@ -374,7 +374,8 @@ data that very substantial savings can be effected by successfully detecting low
 performers.
 ____
 
-This paper is the origin of the idea of the 10x programmer. However, the paper's
+This paper is the origin of the idea of the
+xref:garden::10x-programmer.adoc[10x programmer]. However, the paper's
 findings were debunked by subsequent research. The 1968 study tested programmers
 on tasks that did not represent real-world programming problems. Neither did the
 study account for the impact of collaboration, which we now know to be more
@@ -389,7 +390,7 @@ programmers rather than many mediocre ones.
 It is why, Brooks concludes, there are many accounts of two programmers working
 in a garage to build
 "`an important program that surpasses the best efforts of large teams`". (The
-cliché of the garage startup has deeper roots than I realized!)
+cliché of the xref:garden::garage-startup.adoc[garage startup] has deeper roots than I realized!)
 
 Brooks reiterates his earlier point that throwing lots of man-months at a
 project can actually slow down delivery. He writes,
@@ -425,8 +426,8 @@ Each team operates similarly to a surgical team in a hospital. Each has a chief
 programmer, the surgeon, who is in charge of the team's subsystem. The rest of
 the team members try to help him complete the project (the surgery).
 
-The chief programmer is responsible for defining and maintaining the conceptual
-integrity of his team's part of the overall solution.
+The chief programmer is responsible for defining and maintaining the
+xref:garden::conceptual-integrity.adoc[conceptual integrity] of his team's part of the overall solution.
 "`He personally defines the functional and performance specifications, designs the program, codes it, tests it, and writes its documentation`".
 The chief programmer is supported by a copilot who researches design options for
 the chief programmer to consider, drawing upon the experience and expertise of
@@ -449,9 +450,9 @@ Although the concept of the surgical team will be unfamiliar to most software
 developers today, the underlying principles are well understood. The
 responsibilities of the chief programmer are today split between roles like
 Technical Lead and Solution Architect. The concept of having a chief programmer
-supported by a copilot today manifests itself in the pair programming
+supported by a copilot today manifests itself in the xref:garden::pair-programming.adoc[pair programming]
 methodology (and, more recently, in AI-augmented programming). And surgical
-teams as a whole are conceptually similar to the practice of mob programming.
+teams as a whole are conceptually similar to the practice of xref:garden::mob-programming.adoc[mob programming].
 
 Harlan Mills' work, which was popularized by Brooks in _The Mythical Man-Month_,
 laid the groundwork for the software development best practices that were to
@@ -488,7 +489,7 @@ only the chief programmer – or, when they were not available, their copilot �
 actually wrote any computer code.
 
 But the truth is the surgical team design wasn't so much about improving
-communication as it was about dealing with the practical constraints of the era.
+communication as it was about dealing with the practical xref:garden::constraint.adoc[constraints] of the era.
 Memory and disk access were too limited and expensive to be shared by everyone
 at once. Today there are no such constraints.
 
@@ -507,9 +508,9 @@ best to manage complexity in large-scale software systems. Maintaining
 conceptual integrity, Brooks argues, is the best way of containing complexity as
 a codebase sprawls.
 
-Conceptual integrity is a quality of a system that emerges from its high-level
-design. A system with high conceptual integrity is one where all its concepts,
-and their relationships with each other, are applied in a consistent way
+Conceptual integrity is a quality of a system that emerges from its
+xref:garden::high-level-design.adoc[high-level design]. A system with high conceptual integrity is one where all its concepts,
+and their xref:garden::relationship.adoc[relationships] with each other, are applied in a consistent way
 throughout. A consistent design philosophy flows through all subsystems.
 Anywhere you look in the codebase, it demonstrates the same balance of competing
 forces.
@@ -529,7 +530,7 @@ contains many good but independent and uncoordinated ideas.
 ____
 
 I think few modern architects would dispute Brooks's notion that conceptual
-integrity is one of the most important principles of software design, though
+integrity is one of the most important principles of xref:garden::software-design.adoc[software design], though
 today we are more likely to use terms like "`cohesion`" and "`consistency`" to
 refer to the same qualities.
 
@@ -539,13 +540,13 @@ integrity, Brooks says
 This is difficult to do in large-scale software projects because of the division
 of labour. The implementation is necessarily broken up into lots of small
 pieces, each designed and constructed independently by different programmers,
-who each make different choices and trade-offs.
+who each make different choices and xref:garden::trade-off.adoc[trade-offs].
 
 Brooks draws a parallel with European cathedrals, most of which
 "`show differences in plan or architectural style between parts built in different generations by different builders`".
 In software, Brooks notes, such conceptual disunity arises not from the passage
 of time – hundreds of years separating phases of functional extension – but from
-the decomposition of the design into "`many tasks done by many men`".
+the xref:garden::decomposition.adoc[decomposition] of the design into "`many tasks done by many men`".
 
 The solution offered by Brooks is to have one system architect who designs the
 whole system from top-to-bottom. Multiple surgical teams are overseen by a chief
@@ -563,9 +564,9 @@ simplifying communication flows within teams.
 
 === Top-down versus bottom-up design
 
-Today, we know this development model as top-down design. You start with a clear
-understanding of the user interface, the overall architectural style that you
-want to achieve, and the architectural patterns that you want to use. Within
+Today, we know this development model as xref:garden::top-down-design.adoc[top-down design]. You start with a clear
+understanding of the xref:garden::user-interface.adoc[user interface], the overall architectural style that you
+want to achieve, and the xref:garden::architectural-pattern.adoc[architectural patterns] that you want to use. Within
 that overall design framework, the solution is broken down into a hierarchy of
 smaller, more manageable subsystems, modules, and components – each initially
 designed as a black box (only their interfaces are specified, not their internal
@@ -593,12 +594,12 @@ formulation of the decade.
 ____
 
 Top-down design methods were favored in software development until the late
-1980s. Ever since, bottom-up design has been more highly regarded. Bottom-up
+1980s. Ever since, xref:garden::bottom-up-design.adoc[bottom-up design] has been more highly regarded. Bottom-up
 design emphasizes building a system from small, primitive components, gradually
 integrating lots of small parts to compose the complete solution. Top-down
 design has come to be associated with big design up-front and waterfall
 methodologies, which are considered old-fashioned and inflexible, while
-bottom-up design is associated with lean and agile methodologies, which are
+bottom-up design is associated with lean and xref:garden::agile.adoc[agile] methodologies, which are
 considered more modern and flexible.
 
 In practice, all software projects combine elements of both top-down and
@@ -612,7 +613,7 @@ approaches.
 
 In the debate over the merits of top-down versus bottom-up design, Brooks draw
 parallels in the trade-offs between autocracy and democracy. He acknowledges
-that his proposed top-down approach to software architecture means that the
+that his proposed top-down approach to xref:garden::software-architecture.adoc[software architecture] means that the
 architects behave something of like aristocracy within the technical domain, and
 that the demographic ideals that help to form cohesive, engaged teams are
 sacrificed.
@@ -625,16 +626,16 @@ Brooks concludes that a reasonable balance must be found between demographic and
 autocratic approaches. Everyone should be able to contribute ideas, but
 ultimately there must be a single authority who makes the final decisions.
 
-Both architects and implementers have important roles to play in system design,
+Both architects and implementers have important roles to play in xref:garden::system-design.adoc[system design],
 Brooks writes. Architects, who design the external specification (ie. the user
 interface), will have a disproportionate influence over the ease of use of the
-product. On the other hand, the compound effect of all the many low-level design
+product. On the other hand, the compound effect of all the many xref:garden::low-level-design.adoc[low-level design]
 choices made by the programmers along the way will determine the eventual
 real-world performance of the product.
 
 Brooks also makes the point that implementation – the raw coding – is also a
 form of creative work, just one that operates at a different level of
-abstraction to the architecture.
+xref:garden::abstraction.adoc[abstraction] to the architecture.
 "`The opportunity to be creative and inventive in implementation is not significantly diminished by working within a given external specification.`"
 
 Brooks observes that, unlike other engineering disciplines, in software
@@ -711,7 +712,7 @@ remains a sound one. Perhaps if we applied technical constraints to each feature
 like this, our software products might remain leaner and more focused for
 longer.
 
-But it is perhaps more common today to incorporate refactoring into maintenance
+But it is perhaps more common today to incorporate xref:garden::refactoring.adoc[refactoring] into maintenance
 activities, else to make code so cheap to produce that we are happy to rebuild
 our applications from scratch every few years – as Google famously does.
 
@@ -772,7 +773,7 @@ The only constant is change itself.
 ____
 
 Embracing change is, of course, fundamental to genuinely-agile development
-practices such as Extreme Programming. But in 1975 this was quite a novel way of
+practices such as xref:garden::extreme-programming.adoc[Extreme Programming]. But in 1975 this was quite a novel way of
 looking at software delivery.
 
 Perhaps the most perceptive observation is that software development techniques
@@ -788,11 +789,11 @@ accommodate changing requirements as easily as possible. Second, we must prepare
 the organization itself for change.
 
 It turns out, designing software for change is the easy part. And with many new
-programming techniques emerging in the 1970s – things like structured
-programming, new high-level programming languages, compile-time operations to
+programming techniques emerging in the 1970s – things like
+xref:garden::structured-programming.adoc[structured programming], new high-level programming languages, compile-time operations to
 validate code, better modularization and sub-routining, and self-documenting
 techniques – it was already getting easier to design software to be easily
-changed after its initial construction. (Automated testing is not mentioned.)
+changed after its initial construction. (xref:garden::automated-testing.adoc[Automated testing] is not mentioned.)
 
 Designing an organization for change is the hard part, Brooks observes.
 
@@ -844,7 +845,7 @@ image::diagrams/bug-discovery-over-time.svg[opts=inline]
 Furthermore, fixing a defect has a substantial chance – 20% to 50% – of
 introducing another defect. To counteract this, Brooks says that after each fix
 the entire bank of test cases must be re-run against the system. Today we call
-this regression testing and we automate it.
+this xref:garden::regression-testing.adoc[regression testing] and we automate it.
 
 [quote, Fred Brooks]
 ____
@@ -943,7 +944,7 @@ builders:
   refine the user interface, as it is described in the user manual.
 
 * *Formal definitions*: Formal interface definitions should be used to specify a
-  system's internal interfaces. Formal notations are precise and complete, but
+  system's internal interfaces. Formal xref:garden::notation.adoc[notations] are precise and complete, but
   lack comprehensibility, therefore good system documentation will consist of a
   mix of formal notations (for precision) and prose (for extra definition and
   comprehensibility).
@@ -1045,7 +1046,7 @@ testing techniques. Automated testing is not mentioned anywhere. In chapter 13,
 "`The Whole and the Parts`", there is a nod toward integration testing –
 "`using the pieces to test each other`" – but Brooks seems to be in favour of
 focusing on manual system testing, so as to reduce the effort required to
-prepare all the scaffolding needed for component and integration tests. At the
+prepare all the xref:garden::scaffolding.adoc[scaffolding] needed for component and integration tests. At the
 time, innovations in testing techniques were focused on improvements to
 debugging tools, with
 "`great leaps forward in approaches to debugging programs`" with the advent of
@@ -1054,7 +1055,7 @@ the initial publication of the book.
 
 Brooks writes of the importance of clearly documenting and versioning changes,
 with individual programmers working on "`playpen`" copies of the codebase. With
-version control systems now ubiquitous in all software development toolchains,
+xref:garden::version-control.adoc[version control] systems now ubiquitous in all software development toolchains,
 these practices are now the norm. It is incredible to think that 50 years ago
 such practices were exceptional.
 
@@ -1087,12 +1088,12 @@ not only memory size, but also disk accesses, storage space, and so on.
 Brooks also writes that, on large-scale software projects, individual teams tend
 to optimize for the performance targets of their own subsystems, rather than
 think about the total effect on the user. This may no longer be true of most
-monolithic systems, but it is certainly true of modern distributed systems like
-microservices.
+monolithic systems, but it is certainly true of modern xref:garden::distributed-system.adoc[distributed systems] like
+xref:garden::microservices.adoc[microservices].
 
 And Brooks writes that the best-performing systems – those that are genuinely
 lean and fast – peform well because of strategic innovations, such as
-well-designed algorithms, rather than tactical cleverness. And the greatest
+well-designed xref:garden::algorithm.adoc[algorithms], rather than tactical cleverness. And the greatest
 performance optimizations can usually be found in the strategic design of data.
 Redoing the representation of data will often yield bigger performance
 improvements than optimizing the business logic, Brooks observes.
@@ -1141,13 +1142,13 @@ fundamentally changing the nature of the thing.
 
 Applied to software, essential complexity is found in the aspects of a system
 design that are essential to solving the problem that the system is intended to
-solve. Essential complexity is derived from the problem domain: the concepts,
+solve. Essential complexity is derived from the problem xref:garden::domain.adoc[domain]: the concepts,
 relationships, and logic that must be expressed in order to fulfil the
 requirements of the user, and to apply the business rules and meet real-world
 constraints. Nothing can be done to eliminate this form of complexity.
 
 Accidental complexity, on the other hand, arises from our choices of tools,
-languages, syntax, data structures, and logic to solve the problem. Accidental
+languages, syntax, xref:garden::data-structure.adoc[data structures], and logic to solve the problem. Accidental
 complexity cannot be eliminated entirely, but it can be minimized by making good
 trade-offs in our software designs.
 
@@ -1155,7 +1156,7 @@ Brooks's argument is that most of the challenges in software development arise
 from software's essential complexity, not its accidental complexity. It is the
 nature of software systems that they are
 "`more complex than most things people build`". Software systems have a large
-number of possible states, which makes conceiving, describing, and testing them
+number of possible xref:garden::state.adoc[states], which makes conceiving, describing, and testing them
 very hard to do. And, unlike physical products, scaling up is not a matter of
 producing more of the same thing, but it concerns designing, constructing, and
 testing entirely new and original components and having them interact seamlessly
@@ -1187,7 +1188,7 @@ inherent characteristics of software itself. Thus
 Brooks believed that a series of innovations attacking essential complexity
 could lead to significant further improvements in developer productivity. Brooks
 considered innovations such as incremental development practices, techniques for
-rapid prototyping, and the emergence of a mass market for software components
+rapid xref:garden::prototyping.adoc[prototyping], and the emergence of a mass market for software components
 (allowing us to buy, rather than build, the software we need). All of this
 innovation had attacked the essential complexity of software development,
 leading to worthwhile improvements in productivity. But, Brooks concluded, none
@@ -1204,8 +1205,8 @@ greatly simplified the software development process itself.
 
 Brooks looked ahead to recent advances in high-level programming languages such
 as Ada, to improvements in programming environments and tools, to the hope for
-object-oriented programming and tools for program verification at compilation
-time, and indeed to the promises of artificial intelligence and other forms of
+xref:garden::object-oriented-programming.adoc[object-oriented programming] and tools for program verification at compilation
+time, and indeed to the promises of xref:garden::artificial-intelligence.adoc[artificial intelligence] and other forms of
 "`automatic programming`". In all cases, Brooks argued that the productivity
 gains from each of these advances would be merely marginal.
 
@@ -1214,10 +1215,10 @@ Was Brooks right?
 In the intervening decades, there have certainly been many further important
 innovations attacking both the essential and accidental complexity of our
 software systems. For essential complexity I would argue that techniques in
-domain modeling and domain-driven design patterns have been very helpful. As for
+domain xref:garden::modeling.adoc[modeling] and xref:garden::domain-driven-design.adoc[domain-driven design] patterns have been very helpful. As for
 sources of accidental complexity, the success of open source, free and low-cost
 tools and languages, version control systems, virtualization/containerization
-and cloud computing, continuous integration and automated deployment pipelines,
+and xref:garden::cloud-computing.adoc[cloud computing], continuous integration and automated xref:garden::deployment-pipeline.adoc[deployment pipelines],
 and – most recently – AI-augmented programming, have all incrementally
 transformed how we build software.
 
@@ -1257,16 +1258,16 @@ for anyone working in the software industry. The 20th anniversary edition is
 recommended for its extended content.
 
 What I learnt from _The Mythical Man-Month_ is that modern best practices in
-software development are deeply rooted. The seeds for our current ways of
-working were sown here, in the 1960s and 1970s, when we started to push the
+software development are deeply rooted. The seeds for our current
+xref:garden::ways-of-working.adoc[ways of working] were sown here, in the 1960s and 1970s, when we started to push the
 boundaries of what software could do. Almost all of the ideas put forward by
 Fred Brooks in this book are just as relevant in 2025 as they were in 1975.
 
 Of course, some of the challenges today are different from what they were in the
 time of OS/360. Notably, we are no longer physically constrained by computing
 resources. Hardware is abundant, easily sourced, and cheap. Yet physical
-constraints remain for many categories of software – real-time systems, embedded
-systems, safety-critical systems, and many other systems operating in domains
+constraints remain for many categories of software – real-time systems,
+xref:garden::embedded-system.adoc[embedded systems], xref:garden::safety-critical-system.adoc[safety-critical systems], and many other systems operating in domains
 that have strict performance requirements.
 
 Yet, for all our advances in technology and working practices, in 2025 the core

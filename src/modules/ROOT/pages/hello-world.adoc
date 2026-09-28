@@ -34,7 +34,7 @@ With the aid of open source tooling and cheap computing capacity, we have
 automated away many aspects of our jobs. This means we can deliver more and
 more, faster and faster.
 
-Yet for all the promise of agile development cycles and lean business models,
+Yet for all the promise of xref:garden::agile.adoc[agile] development cycles and lean business models,
 our industry is notorious for its stubborn ineptitude to deliver completed
 products on time, on budget, and to spec.
 
@@ -72,20 +72,20 @@ and digital content production services to small and medium businesses.
 Working as an independent consultant for more than a decade I gained extensive
 experience working for all sorts of organizations – big and small, old and new,
 public and private – and developing technical solutions for a whole jumble of
-problem domains.
+problem xref:garden::domain.adoc[domains].
 
 My technical skills matured in lockstep with the advancement of
-{link-web-platform}[the web platform] and the JavaScript language.
+{link-web-platform}[the web platform] and the xref:garden::javascript.adoc[JavaScript] language.
 Incrementally, I turned my hobby of computer programming into a career in
 software engineering.
 
 Today, though I continue to work close to the code, increasingly I find myself
-engaged in software design and architecture, project delivery, and the
+engaged in xref:garden::software-design.adoc[software design] and architecture, project delivery, and the
 management of technical teams.
 
-I'm a big advocate of domain-driven design, immutable data modelling, and
-test-driven iterative and incremental processes supported by continuous
-integration and automated delivery toolchains. These methods and tools I've
+I'm a big advocate of xref:garden::domain-driven-design.adoc[domain-driven design], immutable data modelling, and
+test-driven iterative and incremental processes supported by
+xref:garden::continuous-integration.adoc[continuous integration] and automated delivery toolchains. These methods and tools I've
 found to be advantageous in almost every software project in which I've been
 involved.
 

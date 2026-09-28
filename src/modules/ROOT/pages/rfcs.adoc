@@ -41,10 +41,10 @@ The RFC format is also conspicuous in open source. It has been adopted by some
 prominent projects such as {link-rust-rfcs}[Rust], {link-react-rfcs}[React],
 {link-vue-rfcs}[Vue], {link-yarn-rfcs}[Yarn] and {link-eslint-rfcs}[ESLint]. In
 this domain RFCs are used principally to evolve the design of core software
-components.
+xref:garden::component.adoc[components].
 
 From my personal experience, RFCs seem to be much less used within commercial,
-closed source software projects – at least in enterprise application software,
+closed source software projects – at least in xref:garden::enterprise-application-software.adoc[enterprise application software],
 the scope of my work experience. This is a pity. I contend that RFCs are
 incredibly valuable in commercial software development, too.
 
@@ -53,8 +53,8 @@ incredibly valuable in commercial software development, too.
 The ultimate aim of RFCs is to make better technical decisions.
 
 This is achieved by opening up decision making to the widest possible range of
-stakeholders, so absorbing more ideas and points-of-view, while at the same time
-applying strong governance to decision making.
+xref:garden::stakeholder.adoc[stakeholders], so absorbing more ideas and points-of-view, while at the same time
+applying strong xref:garden::governance.adoc[governance] to decision making.
 
 The RFC process encourages clarity of thought. The act of putting an idea into
 writing requires the author to clearly articulate the problem and their proposed
@@ -83,7 +83,7 @@ still is a chronologically ordered collection of them. This serves as a ledger
 of major decisions taken over the lifetime of a project – a decision log.
 
 While program code, automated test scripts, architectural diagrams, and other
-forms of documentation record _what_ a system does and _how_ it does it (the
+forms of xref:garden::documentation.adoc[documentation] record _what_ a system does and _how_ it does it (the
 "here and now"), these artifacts do not tell you _why_ a system is made the way
 it is (the "how we got here"). A decision log fills this gap. This knowledge
 would otherwise risk being lost as the original decision makers gradually
@@ -92,8 +92,8 @@ offboard from the project.
 Recording today's decisions for posterity will mean better decisions can be made
 in the future. Or, to look at it another way, we could make better decisions now
 if we understood the context in which past decisions were made. What were the
-main constraints – eg. time, budget, expertise, or quality requirements such as
-security and performance – that shaped the current design of the system? What
+main xref:garden::constraint.adoc[constraints] – eg. time, budget, expertise, or xref:garden::quality-requirement.adoc[quality requirements] such as
+xref:garden::security.adoc[security] and xref:garden::performance.adoc[performance] – that shaped the current design of the system? What
 was the rationale for previous technical decisions, and were the consequences
 fully understood at the time?
 
@@ -119,8 +119,8 @@ problems with engagement and trust.
 
 RFCs scale wonderfully well. Indeed, the larger the project, the more useful
 they become. They can be used to facilitate technical standardization and to
-help share knowledge between teams. And they support asynchronous ways of
-working, which becomes more necessary as communication overhead grows. RFCs will
+help share knowledge between teams. And they support asynchronous
+xref:garden::ways-of-working.adoc[ways of working], which becomes more necessary as communication overhead grows. RFCs will
 become more useful still as IT workforces get more geographically distributed
 and flexible working schedules become more widely supported.
 
@@ -144,10 +144,10 @@ But there is no limit to the possible scope of RFCs. There is no reason why they
 can't be used to support any kind of technical decision, anything that impacts
 how a system is made, such as:
 
-* Adoption of design patterns and coding conventions.
+* Adoption of xref:garden::design-pattern.adoc[design patterns] and coding conventions.
 * Choices of languages, frameworks and libraries.
 * Development and operations processes, and related automation tools (eg.
-  CI/CD).
+  xref:garden::ci-cd.adoc[CI/CD]).
 * Policies such as branching-and-merging strategies and test-and-release plans.
 * Project management practices and ways of working.
 
@@ -165,11 +165,11 @@ own internal RFC systems for making decisions over which they have autonomy.
 
 Each proposal put forward for comments should be scoped to a single technical
 decision. But the breadth of impact may be broad or narrow, and the range of
-stakeholders involved should be proportional to that impact. Refactoring the
-internal structure of a discrete module should require input from just a few
+stakeholders involved should be proportional to that impact. xref:garden::refactoring.adoc[Refactoring] the
+internal structure of a discrete xref:garden::module.adoc[module] should require input from just a few
 technical people. Replacing a language in the technology stack or adding a major
 new tool to the delivery pipeline should require broad consensus from many more
-people. And proposals that could affect service level agreements or mission
+people. And proposals that could affect xref:garden::service-level-agreement.adoc[service level agreements] or mission
 alignment would need to be elevated to product owners or other business
 stakeholders.
 
@@ -178,7 +178,7 @@ proposals. This certainly makes sense in the context of software libraries and
 other software components where the users are other software developers. This is
 why RFCs are popular in open source projects. But I have successfully used RFCs
 to evaluate feature proposals in enterprise application software, too. I have
-found RFCs to be particularly useful in business contexts where ideas are
+found RFCs to be particularly useful in xref:garden::business-context.adoc[business contexts] where ideas are
 plentiful but resources are scarce. (We've all been there, right?)
 
 At this scope, RFCs are no longer purely a development tool, but they become
@@ -227,7 +227,7 @@ The RFC process is initialized by a proposal being put forward for comments –
 literally, a request for comments. Proposals are negotiated with the relevant
 stakeholders. During this phase, the original proposal may change, perhaps
 significantly, in response to stakeholder feedback. Once a solution is agreed,
-the proposal is updated to describe the settled solution, the design rationale
+the proposal is updated to describe the settled solution, the xref:garden::design-rationale.adoc[design rationale]
 for it, and the relative pros and cons of any alternative solutions that were
 considered.
 
@@ -254,8 +254,8 @@ total number of prior decisions.
 
 == Format
 
-RFCs should be centralized and may be implemented in databases or software
-systems like wikis. But I recommend starting with a code repository with an
+RFCs should be centralized and may be implemented in xref:garden::database.adoc[databases] or
+xref:garden::software-system.adoc[software systems] like wikis. But I recommend starting with a code xref:garden::repository.adoc[repository] with an
 integrated code review / merge request tool. These tools will be already
 familiar to the development teams. This will reduce the learning curve,
 encourage adoption, and it will keep the log of technical decisions close to the
@@ -331,8 +331,8 @@ A template should be included for new proposals. I recommend keeping it simple
 to start. Use a lightweight text markup format such as Markdown, AsciiDoc or
 Textile, and request that the following key information be captured:
 
-* *Context*: The forces at play – the functional and non-functional
-  requirements, and constraints such as time, budget and expertise – that shaped
+* *Context*: The forces at play – the functional and
+xref:garden::non-functional-requirements.adoc[non-functional requirements], and constraints such as time, budget and expertise – that shaped
   the proposed solution.
 
 * *Solution*: This section may evolve over the course of an RFC's lifecycle.
@@ -344,7 +344,7 @@ Textile, and request that the following key information be captured:
   were considered by the RFC author or by contributors during design
   discussions.
 
-* *Consequences*: What are the trade-offs (the costs versus the benefits) of the
+* *Consequences*: What are the xref:garden::trade-off.adoc[trade-offs] (the costs versus the benefits) of the
   proposed solution, as they were understood at the time? This should cover both
   positive and negative consequences, and "known unknown" outcomes.
 
@@ -368,7 +368,7 @@ process – the Rust project has its very own https://rfcbot.rs/[rfcbot] – but
 is recommended to keep it manual to start, then automate once the process has
 settled into a regular pattern.
 
-One potential downside of using a version control system for RFCs is that the
+One potential downside of using a xref:garden::version-control.adoc[version control] system for RFCs is that the
 technical decision making process will be less accessible to non-technical
 stakeholders. It may be beneficial to have separate RFC-like systems for
 higher-level business-oriented decisions and lower-level technical decisions.
@@ -393,9 +393,9 @@ architecture (ie. the same headings in the same order).
 
 Where RFCs are used as a technical design process, they should be tightly
 coupled with the project's task tracking system. For example, where the
-implementation of a user story requires substantive revisions to either the
-external interfaces or the internal construction techniques of a software
-component, or to its dependencies, it can be beneficial to put the changes
+implementation of a xref:garden::user-story.adoc[user story] requires substantive revisions to either the
+external xref:garden::interface.adoc[interfaces] or the internal construction techniques of a software
+component, or to its xref:garden::dependency.adoc[dependencies], it can be beneficial to put the changes
 through a more rigorous and structured design process _before_ the changes are
 introduced in code and configuration. Breaking out the work to an RFC is an
 excellent method for that. Shifting left the design review means that multiple
@@ -407,9 +407,9 @@ for an implementation, so they're only checking it meets the functional and
 non-functional requirements, and not also whether it's the optimal design.
 
 RFCs should record conceptual choices as well concrete details. "We elected to
-implement a loosely-coupled monolith because…" describes the rationale for one
+implement a loosely-coupled xref:garden::monolith.adoc[monolith] because…" describes the rationale for one
 aspect of a system's conceptual architecture. "We decided to use the Hibernate
-ORM for DB abstraction because…" describes the rationale for a concrete
+ORM for DB xref:garden::abstraction.adoc[abstraction] because…" describes the rationale for a concrete
 implementation of a specific component of that system. In the grand scheme of a
 software project, the first example has the farthest reaching consequences.
 
@@ -444,7 +444,7 @@ technical proposals have come from non-technical people. And I've seen junior
 developers propose far simpler, but equally effective, alternatives to solutions
 proposed by seasoned architects.
 
-Perspective is as important as expertise. It's not unusual for obvious risks and
+Perspective is as important as expertise. It's not unusual for obvious xref:garden::risk.adoc[risks] and
 flaws in a design to be spotted only by the people furthest from the problem.
 
 Psychological safety is key to the success of the RFC process. Everyone should

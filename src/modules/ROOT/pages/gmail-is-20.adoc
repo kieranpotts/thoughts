@@ -42,7 +42,7 @@ webmail service proved to be no April Fools' joke.
 == Gmail's architecture
 
 Gmail was a technological marvel. It was the first mainstream web application
-that used only native web technologies (HTTP, HTML, CSS, JavaScript, and bitmap
+that used only native web technologies (xref:garden::http.adoc[HTTP], HTML, CSS, xref:garden::javascript.adoc[JavaScript], and bitmap
 graphics) to deliver levels of functionality and user experience not previously
 thought possible in web browsers – not without the help of extensions, anyway.
 
@@ -96,7 +96,7 @@ consultancy Adaptive Path, in a {link-ajax}[2005 blog post]. The name was
 shorthand for "Asynchronous JavaScript + XML", and it captured the idea of using
 client-side JavaScript to make asynchronous HTTP requests to fetch new data from
 the server – which commonly was returned in the XML format at that time – and to
-use that data to dynamically redraw parts of the user interface.
+use that data to dynamically redraw parts of the xref:garden::user-interface.adoc[user interface].
 
 Google invested heavily in the ajax approach to web application architecture.
 Google Calendar and – most impressively of all – Google Maps further tested the
@@ -113,14 +113,14 @@ Gmail showed the technology industry what was possible with the web platform.
 Perhaps more importantly, it set new user expectations about what good user
 experience looked like in the web browser.
 
-Around this time, a rift opened up between stakeholders in web standardization
+Around this time, a rift opened up between xref:garden::stakeholder.adoc[stakeholders] in web standardization
 efforts. Microsoft was pushing its Extensible Application Markup Language (XAML)
 and Silverlight, while the World Wide Web Consortium (W3C) was working on XHTML
 2.0 and XForms – efforts to make HTML a stricter markup format and thus more
 extensible and interoperable with other XML-based data formats. Meanwhile,
 Apple, Mozilla and Opera broke away and formed the Web Hypertext Application
 Technology Working Group (WHATWG) to develop an alternative evolution of the
-existing HTML standard. This focused on maintaining backwards compatibility
+existing HTML standard. This focused on maintaining xref:garden::backwards-compatibility.adoc[backwards compatibility]
 while extending the language to offer many of the capabilities of Flash and
 Silverlight, such as the ability to play audio and video directly through the
 web browser.
@@ -148,11 +148,11 @@ technologies.
 
 Gmail was one of the first of a new breed of software applications that have
 since become the norm. This was perhaps the first large-scale
-software-as-a-service product: delivered over the network, accessible from
+xref:garden::software-as-a-service.adoc[software-as-a-service] product: delivered over the network, accessible from
 anywhere, backed by flexible cloud storage, and available under an
-ad-supported"freemium" software licensing model.
+ad-supported "freemium" software licensing model.
 
-Gmail encapsulated all the key concepts of cloud computing into a consumer
+Gmail encapsulated all the key concepts of xref:garden::cloud-computing.adoc[cloud computing] into a consumer
 product that ran in the web browser but behaved like a regular software
 application. Despite all the innovation in the web space since, at a fundamental
 level we're still developing web applications like this today.

@@ -15,7 +15,7 @@ Kieran Potts, 14 October 2019
 
 :desc-logo: A yellow square with the letters JS in black in the bottom-right corner
 
-An interesting question was asked recently in LinkedIn's JavaScript group:
+An interesting question was asked recently in LinkedIn's xref:garden::javascript.adoc[JavaScript] group:
 
 [quote]
 Does JavaScript need to be renamed?
@@ -24,7 +24,7 @@ The question really got me thinking.
 
 There's no doubt there are problems with JavaScript's branding:
 
-* The official specification for the language is actually called ECMAScript – a
+* The official specification for the language is actually called xref:garden::ecmascript.adoc[ECMAScript] – a
   rather jarring and clumsy bit of branding by the standards organization that
   oversees the language's specification, Ecma International.
 
@@ -67,7 +67,7 @@ libraries. Browse GitHub for open source JavaScript packages that solve a
 particular problem, and for each solution you must dig deep into the README or
 the `package.json` file to discover if that particular JavaScript package is
 compatible with your own JavaScript application. (The problem is made worse by
-the current period of transition between module systems: from community-derived
+the current period of transition between xref:garden::module.adoc[module] systems: from community-derived
 conventions such as CommonJS, AMD and UMD, towards ECMAScript's standard module
 notation.)
 
@@ -88,7 +88,7 @@ unrelated language.
 Alternative implementations of the language were called JScript (Microsoft's
 version for its Internet Explorer browser) and ActionScript (Adobe's version).
 And various dialects of JavaScript that have enjoyed their time in the sun over
-the years include CoffeeScript and, today, TypeScript.
+the years include CoffeeScript and, today, xref:garden::typescript.adoc[TypeScript].
 
 I think Eich was on the right track all along. *Mocha* is a great name. In the
 software space, this name conflicts only with the {link-mocha}[Mocha test

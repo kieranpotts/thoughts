@@ -34,7 +34,7 @@ content from C code. His initial approach was to nest HTML in string values in C
 But he found this to be a poor user experience. What he wanted was to keep
 his HTML code looking like HTML.
 
-To meet that design constraint, Lerdorf's solution was to create "a C API for
+To meet that design xref:garden::constraint.adoc[constraint], Lerdorf's solution was to create "a C API for
 the web". His idea was to write an extension for the Apache web server that
 allowed him to execute C functions from HTML documents.
 
@@ -57,13 +57,13 @@ Hi <?echo $name?>, you are <?echo $age?> years old
 </body></html>
 ----
 
-This design made for a better separation of business logic from user interface
-concerns. The HTML code, which declares instructions for the browser to render
+This design made for a better separation of business logic from xref:garden::user-interface.adoc[user interface]
+xref:garden::concern.adoc[concerns]. The HTML code, which declares instructions for the browser to render
 the user interface, is interspersed with C APIs that handle the dynamic content
 generation and other business logic on the server-side.
 
 PHP started, not as a programming language, but as a templating system for web
-pages served by the Apache HTTP server.
+pages served by the Apache xref:garden::http.adoc[HTTP] server.
 
 Lerdorf imagined that, like him, people would want to write their business logic
 in a strictly typed, compiled language like C or C++, and then surface that
@@ -113,7 +113,7 @@ directly in HTML.
 
 As well as being convenient, PHP was efficient, too. It was tightly integrated
 with the Apache web server (via the
-mod_php module), and tightly coupled to the HTTP request-response cycle. PHP also made it incredibly easy to "plug in" snippets of custom logic to _existing_
+mod_php xref:garden::module.adoc[module]), and tightly coupled to the HTTP request-response cycle. PHP also made it incredibly easy to "plug in" snippets of custom logic to _existing_
 web pages, providing an easy upgrade path for existing websites to become
 dynamic and interactive.
 

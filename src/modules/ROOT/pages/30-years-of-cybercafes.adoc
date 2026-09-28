@@ -34,7 +34,7 @@ computers in a homely setting. A café.
 Pascoe's interest in computers had started as a child. But when she was growing
 up, Poland was behind the iron curtain and sales restrictions made it difficult
 to buy new computers. So Pascoe learnt to make her own computers by glueing
-together all the individual hardware components, which she bought second-hand at
+together all the individual xref:garden::hardware.adoc[hardware] components, which she bought second-hand at
 Sunday markets.
 
 In London, Pascoe was far from home and lonely. She regularly used email to keep
@@ -94,7 +94,7 @@ It proved that the cybercafé concept had mass appeal, beyond the cyberpunk and
 hacker subcultures, and was a commercially viable business model.
 
 Computing had originated in academia and later moved into military and
-enterprise domains. It was relatively late in the evolution of computer science
+enterprise domains. It was relatively late in the evolution of xref:garden::computer-science.adoc[computer science]
 that IT became affordable and accessible enough for adoption by the general
 public, and so begun transforming social life into what we know today. You can't
 put an exact date on when that transformation started, but the opening of

@@ -5,9 +5,9 @@ Kieran Potts, 4 January 2024
 :nofooter:
 
 This post describes a mental model I use for thinking about the different
-attributes of a software system, both its features and its qualities.
+attributes of a xref:garden::software-system.adoc[software system], both its features and its qualities.
 
-When I think about the requirements of a software system, I have an image in my
+When I think about the xref:garden::requirement.adoc[requirements] of a software system, I have an image in my
 head that looks something like this:
 
 image::diagrams/software-attributes.svg[opts=inline]
@@ -19,7 +19,7 @@ Let me explain.
 When we're developing a software system, we're concerned about two aspects of
 it:
 
-* The *correctness* of the system.
+* The *xref:garden::correctness.adoc[correctness]* of the system.
 
 * The level of *quality* to which it is made.
 
@@ -29,13 +29,13 @@ I'll deal with each of these in turn.
 
 In this mental model, *correctness* is a measure of whether a system is fit for
 purpose. A system is said to be correct if it meets both the functional and
-non-functional requirements of the organization that owns it and the people that
+xref:garden::non-functional-requirements.adoc[non-functional requirements] of the organization that owns it and the people that
 use it.
 
-* Functional requirements (FRs) define the *operations* of the system, ie.
+* xref:garden::functional-requirement.adoc[Functional requirements] (FRs) define the *operations* of the system, ie.
   _what_ it does.
 
-* Non-functional requirements (NFRs) define the *constraints* within which the
+* Non-functional requirements (NFRs) define the *xref:garden::constraint.adoc[constraints]* within which the
   system must operate, ie. _how_ well it works.
 
 For example, a functional requirement may be that a system allows users to
@@ -49,7 +49,7 @@ NFRs) make up the *features* of the software system.
 Features – everything on the top row in the diagram – are of concern to the
 organization that owns the software system and/or the people who use it.
 Features are defined in a system's requirements specification, preferably in the
-form of measurable acceptance criteria.
+form of measurable xref:garden::acceptance-criteria.adoc[acceptance criteria].
 
 A software solution either meets its acceptance criteria or it doesn't. It is
 either correct or incorrect.
@@ -61,7 +61,7 @@ well a software solution is made determines how easily it can be changed,
 debugged, tested, deployed, and so on.
 
 While the features of a software system are important to the business people,
-its internal quality attributes – the bottom row in the diagram – are primarily
+its internal xref:garden::quality-attribute.adoc[quality attributes] – the bottom row in the diagram – are primarily
 of concern to the people who develop, maintain, and operate it – the technical
 people.
 
@@ -69,14 +69,14 @@ Quality is a much more subjective matter. It is not a binary property, like
 correctness. A software system can be made to a higher or lower quality, but it
 is never possible to say whether the design is "correct" or "incorrect".
 
-Different principles of good software design may need to be traded off against
+Different principles of good xref:garden::software-design.adoc[software design] may need to be traded off against
 one another. And anyway, what is "good" design is a matter of opinion. Computer
 programmers on the same team will often have differing opinions on what the
 optimal design for their solution should be.
 
 For these reasons, the quality attributes of software are not easily measurable.
-Metrics such as cyclometric complexity can alert us to code smells, but those
-are not the same things as anti-patterns. Code smells should always be evaluated
+Metrics such as cyclometric xref:garden::complexity.adoc[complexity] can alert us to xref:garden::code-smell.adoc[code smells], but those
+are not the same things as xref:garden::anti-pattern.adoc[anti-patterns]. Code smells should always be evaluated
 via more qualitative assessments of the code.
 
 == Alternative models
@@ -85,7 +85,7 @@ There are other ways to think about the various attributes of a software system.
 
 The concept of "features" is understood in different ways. Commonly, features
 are understood to mean the functions of the system, what it does, distinct from
-NFRs for performance, security, reliability, and so on.
+NFRs for xref:garden::performance.adoc[performance], xref:garden::security.adoc[security], xref:garden::reliability.adoc[reliability], and so on.
 
 But I prefer to think of features as being the fusion of _all_ the
 externally-facing attributes, anything that is meaningful to a system's users.
@@ -98,17 +98,17 @@ People care about features.
 The concept of "quality" is even more nebulous. It is not unusual for people to
 think of quality as a single attribute, a binary property determined by whether
 the software works or not. In practice, the quality of a software system is
-determined by many factors, and different stakeholders will have different
+determined by many factors, and different xref:garden::stakeholder.adoc[stakeholders] will have different
 perspectives on which factors are important.
 
-Personally, I have found it useful to think about software quality as a fairly
+Personally, I have found it useful to think about xref:garden::software-quality.adoc[software quality] as a fairly
 narrowly-scoped subset of attributes that are primarily of concern to the
 developers and operators of the system, separate from the things the users care
 about. These internal qualities are formed from the way the code is written and
 organized, the way data is structured and distributed, and how the system is
 deployed and operated in production.
 
-Supporting artifacts such as technical documentation and automated test scripts
+Supporting artifacts such as technical xref:garden::documentation.adoc[documentation] and automated test scripts
 also contribute to the ease with which a software solution can be developed and
 operated over the long term. These materials contribute to the quality of the
 solution, even if they are not directly part of the software's code and
@@ -123,29 +123,29 @@ Consider security. A system may have an NFR that sensitive data be encrypted in
 transit. The categories of data deemed to be sensitive would, normally, be
 agreed with the product owner. But it should not be necessary to have NFRs
 covering the validation and sanitizing of user input. It's just good coding
-standards to protect software services from SQL injection and other common
+standards to protect software xref:garden::service.adoc[services] from xref:garden::sql-injection.adoc[SQL injection] and other common
 attack vectors.
 
 This example demonstrates that the boundary between internally-facing quality
 attributes and externally-facing operational constraints can be a little fuzzy.
 One way to think about the partition is between runtime qualities and static
 qualities. Qualities that are observable at runtime, like performance and
-accessibility, should – aa a general rule – be treated as operational
+xref:garden::accessibility.adoc[accessibility], should – aa a general rule – be treated as operational
 constraints and specified as NFRs. Qualities that are embedded in the static
-structure of the code and configuration of a system, such as testability and
-scalability, should be the sole responsibility of the technical people.
+structure of the code and configuration of a system, such as xref:garden::testability.adoc[testability] and
+xref:garden::scalability.adoc[scalability], should be the sole responsibility of the technical people.
 
 An alternative guiding principle is that if a design choice is relevant to the
 owner or users of a system, it should be included in the system's specification.
-For example, I would specify any solutions implemented to mitigate the risks of
+For example, I would specify any solutions implemented to mitigate the xref:garden::risk.adoc[risks] of
 denial of service attacks, since such solutions will show up in the system's
-behavior. Rate limiting, for example, has an impact on users.
+behavior. xref:garden::rate-limiting.adoc[Rate limiting], for example, has an impact on users.
 
-Some objectives such as operability and supportability are difficult to specify
+Some objectives such as xref:garden::operability.adoc[operability] and supportability are difficult to specify
 in measurable ways. But if they are relevant to users and non-technical
 stakeholders, such objectives should be specified, even if only in vague terms.
 
-If in doubt, specify quality requirements, even if the acceptance criteria are
+If in doubt, specify xref:garden::quality-requirement.adoc[quality requirements], even if the acceptance criteria are
 somewhat generic!
 
 == Benefits of this model
@@ -170,8 +170,8 @@ Different security protocols can be easily implemented in the relevant layers of
 the system. Ditto for performance optimizations.
 
 And, of course, it is always easier to extend or make changes to specific areas
-of functionality if a system's design makes rational use of modularity and
-encapsulation.
+of functionality if a system's design makes rational use of xref:garden::modularity.adoc[modularity] and
+xref:garden::encapsulation.adoc[encapsulation].
 
 Choices made in the design of a system will have an impact on the features it
 can support. For example, non-functional requirements may be traded off against
