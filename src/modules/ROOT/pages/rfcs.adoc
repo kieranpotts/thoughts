@@ -14,7 +14,7 @@ Kieran Potts, 10 April 2024
 :link-dora:             https://dora.dev/
 :link-spotify:          https://engineering.atspotify.com/2023/03/getting-more-from-your-team-health-checks/
 :link-template-rfcs:    https://github.com/kieranpotts/rfc
-:link-proposal-tpl:     https://github.com/kieranpotts/rfc/blob/main/rfcs/TEMPLATE.md
+:link-proposal-tpl:     https://github.com/kieranpotts/rfc/blob/latest/main/rfc/TEMPLATE.md
 :link-dictator:         https://github.com/git-for-windows/git-for-windows.github.io/blob/main/governance-model.md#benevolent-dictator-project-lead
 :link-silver-bullets:   https://en.wikipedia.org/wiki/No_Silver_Bullet
 :link-juans-and-zeroes: https://medium.com/juans-and-zeroes/a-thorough-team-guide-to-rfcs-8aa14f8e757c
