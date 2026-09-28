@@ -126,7 +126,7 @@ On the surface, Christopher Alexander's _Timeless Way of Building_ — and other
 
 Alexander's advocacy of user-centered approaches to design, the prioritization of characteristics like ease of repair and extension, and the use of timeless patterns that evolve organically from human needs, are ideas that are just as applicable to software design as they are to building design.
 
-In translating Alexander's design philosophy into the field of software design, Richard P Gabriel gave us a name for Alexander's quality-without-a-name, which emerges from this timeless way of building. Habitability.
+In translating Alexander's design philosophy into the field of software design, Richard P Gabriel gave us a name for Alexander's quality-without-a-name, which emerges from this timeless way of building. xref:standards::002.adoc#habitability[Habitability].
 
 Habitability is the ultimate sophistication in software design. It goes beyond changeability. It is a quality that makes a codebase not merely comfortable to change, but welcoming, delightful, and joyous. Software with this transcendent quality is a space in which time passes by unnoticed, where you work late into the night, as engrossed in the art of computer programming as you were the day you discovered it, a lifetime ago.
 
