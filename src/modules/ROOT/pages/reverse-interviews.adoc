@@ -372,20 +372,20 @@ If you get an offer, give yourself a cooling-off period. Wait at least 24 hours 
 
 If you have reservations but are willing to roll the dice, be honest and share that with them. But have the confidence to walk away, too. If there's any uncertainty, if the data is telling you one thing but your gut something else – go with your gut. Trust that you'll figure out why that was the right call later.
 
-== Related links
+== References
 
-* {link-posthog}[The really important job interview questions engineers should ask (but don't)], James Hawkins, PostHog (2022)
+* Edwards, J (2024). {link-edwards-redflags}[_Can You See the Red Flags of a Toxic Tech Company?_].
 
-* {link-leaddev}[31 smart questions to ask in a software engineering interview], Harry Guinness, LeadDev (2024)
+* Farley, D (2022). {link-farley-questions}[_20 Questions to Ask Your Next Employer_].
 
-* {link-farley-questions}[20 questions to ask your next employer], Dave Farley (2022)
+* Farley, D (2021). {link-farley-advice}[_Software Developer Interview Advice_].
 
-* {link-farley-advice}[Software developer interview advice], Dave Farley (2021)
+* Farley, D (2021). {link-farley-places}[_The Best and Worst Places to Work for Developers_].
 
-* {link-farley-places}[The best and worst places to work for developers], Dave Farley (2021)
+* Holub and Farley (2022). {link-holub-hiring}[_Your Hiring Policy Doesn't Work_].
 
-* {link-holub-hiring}[Your hiring policy doesn't work], Allen Holub and Dave Farley (2022)
+* LeadDev (2024). {link-leaddev}[_31 Smart Questions to Ask in a Software Engineering Interview_].
 
-* {link-edwards-redflags}[Can you see the red flags of a toxic tech company?], Jayme Edwards (2024)
+* Paulk et al (1993). {link-cmm}[_Capability Maturity Model, Version 1.1_].
 
-* {link-cmm}[Capability Maturity Model v1.1] (1993) — the CMM was developed in 1986 to assess the maturity of software houses' development processes. Many of the concepts behind process-maturity models are useful for evaluating potential employers too.
+* PostHog (2022). {link-posthog}[_The Really Important Job Interview Questions Engineers Should Ask (but Don't)_].

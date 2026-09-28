@@ -230,20 +230,20 @@ Famously, there are {link-silver-bullets}[no silver bullets] in software develop
 
 Like software systems themselves, the processes we use to develop and maintain them also require thoughtful design.
 
-== Related links
+== References
 
-* {link-juans-and-zeroes}[A thorough team guide to RFCs] — Juan Pablo Buriticá (2023)
+* Buriticá, J P (2023). {link-juans-and-zeroes}[_A Thorough Team Guide to RFCs_].
 
-* {link-reilly}[The power of "yes, if": iterating our RFC process] — Tanya Reilly, Squarespace Engineering blog (2019)
+* Clements et al (2010). {link-clements}[_Documenting Software Architectures: Views and Beyond_].
 
-* {link-ayers}[Communicating and documenting architectural decisions (video)] — David Ayers, LeadDev (2019)
+* Cognitect (2011). {link-nygard}[_Documenting Architecture Decisions_].
 
-* {link-nygard}[Documenting architecture decisions] — Michael Nygard (2011)
+* GitHub (2020). {link-perkins}[_Why Write ADRs_].
 
-* {link-perkins}[Why write ADRs?] — Eli Perkins, GitHub Blog (2020)
+* LeadDev (2019). {link-ayers}[_Communicating and Documenting Architectural Decisions_].
 
-* {link-thoughtworks}[Lightweight architecture decision records], Thoughtworks Technology Radar (2016)
+* RFC Editor. {link-rfc-editor}[_RFC Index_].
 
-* {link-clements}[Documenting software architectures: views and beyond] — Clements _et al_ (2010)
+* Squarespace (2019). {link-reilly}[_The Power of "`Yes, If`": Iterating on Our RFC Process_].
 
-* {link-rfc-editor}[RFC Editor: RFC Index] — Every IETF RFC since 1969.
+* Thoughtworks (2016). {link-thoughtworks}[_Lightweight Architecture Decision Records_].

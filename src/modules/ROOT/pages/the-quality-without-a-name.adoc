@@ -132,8 +132,8 @@ Habitability is the ultimate sophistication in software design. It goes beyond c
 
 As in real-world architecture, habitability in software is achieved through user-centered design. The "`user`" here is not the end user, but the inhabitants of the code — the developers. Habitability is realized by giving developers the freedom to shape their own working environment, by continuously xref:garden::refactoring.adoc[refactoring] the code and the data, by keeping their tools sharp, by choosing their teammates, and by working whatever ways suit them best.
 
-== Related links
+== References
 
-* {link-pattern-language}[PatternLanguage.com], a member-supported website run by The Center for Environmental Structure, Christopher Alexander's architectural practice
+* Center for Environmental Structure. {link-pattern-language}[_PatternLanguage.com_].
 
-* {link-patterns-of-software}[Patterns of Software: Tales from the Software Community], Richard P Gabriel, Oxford University Press, 1996
+* Gabriel, R P (1996). {link-patterns-of-software}[_Patterns of Software: Tales from the Software Community_].

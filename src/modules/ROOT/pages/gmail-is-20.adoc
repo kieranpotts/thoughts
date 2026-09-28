@@ -68,14 +68,14 @@ Gmail encapsulated all the key concepts of xref:garden::cloud-computing.adoc[clo
 
 This is the Gmail era.
 
-== Related links
+== References
 
-* {link-the-verge}[20 years of Gmail], The Verge (2024)
+* Baldwin, S (2005). {link-myownemail}[_Memories of MyOwnEmail.com_].
 
-* {link-wired}[10 years on, Gmail has transformed the web...], Wired (2014)
+* CNET (2007). {link-cnet}[_Will Ajax Help Google Clean Up?_].
 
-* {link-cnet}[Will Ajax help Google clean up?], CNET (2007)
+* Developer.com (2005). {link-devcom}[_AJAX: Asynchronous Java + XML?_].
 
-* {link-devcom}[AJAX: Asynchronous Java + XML?], Developer.com (2005)
+* The Verge (2024). {link-the-verge}[_20 Years of Gmail_].
 
-* {link-myownemail}[Ghost Sites of the Web: MyOwnEmail.com]
+* Wired (2014). {link-wired}[_10 Years On, Gmail Has Transformed the Web as We Know It_].
