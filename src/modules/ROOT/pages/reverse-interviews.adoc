@@ -110,10 +110,15 @@ So far, so checkboxy. But from this baseline of understanding of the role you wa
 * **"`How do you monitor and measure individual performance?`"**
 * **"`How do you evaluate individuals versus the whole team?`"**
 * **"`If I started tomorrow, what would I be working on?`"**
+* **"`What would you expect me to have achieved after six months?`"**
 
-If the answers about success are vague, politely ask for clarification. Listen for a mix of individual and team evaluation, with a slight emphasis on the team, and for _value added_ rather than "`doing whatever it takes`". The last question is not always answerable — you may be hired into a talent pool — but you should expect honesty, even if that's "`we don't know yet`".
+If the answers about success are vague, politely ask for clarification. Listen for a mix of individual and team evaluation, with a slight emphasis on the team, and for _value added_ rather than "`doing whatever it takes`". The last two questions are not always answerable — you may be hired into a talent pool — but you should expect honesty, even if that's "`we don't know yet`".
+
+The six-month question is one of the most revealing. A concrete answer — "`you'll have shipped a feature end to end and be comfortable with the release process`" — shows the organization has thought about what good looks like and how it will support you to get there. A vague answer, or one that describes unrealistic output for a newcomer, suggests unclear expectations or a sink-or-swim culture.
 
 Look to the future, too. You're not applying to do a job for 12 months. You're applying to have an opportunity to build a long, fruitful, rewarding career. Ask questions like: **"`When do performance and pay reviews come around? How are they done? Is pay adjusted for inflation? How does the company support professional growth and development? What is the policy on internal hiring and promotions? How are promotions handled?`"** These sorts of questions reveal how much an organization _really_ values its people. Fair and transparent systems of pay review and promotion are good. Secretive or vague processes are a warning sign.
+
+If you want to stay hands-on, ask about progression for individual contributors: **"`What does career progression look like for an engineer who wants to keep building rather than move into management? Is there a senior or staff track with equivalent pay and influence?`"** A real individual contributor track, with published levels and expectations, is a green flag. If the only way up is to manage people, expect your best engineers to leave or to become mediocre managers.
 
 If you're really brave, ask: **"`What is the average tenure of a developer here?`"** Incredibly, the average tenure for a permanent tech worker is only about two years. But some organizations buck this dismal trend, and they'll happily tell you why.
 
@@ -174,6 +179,8 @@ These questions probe who decides what gets built and in what order, and whether
 * **"`Are your requirements stable or volatile? How do you manage change requests (scope creep)?`"** Volatility in requirements (ie. xref:garden::scope-creep.adoc[scope creep]) is a perfectly natural phenomenon in almost all software projects. A mature software organization will account for this in its delivery planning.
 
 * **"`How is technical debt and refactoring prioritized against feature delivery? How is time for it factored into the process?`"** If xref:garden::technical-debt.adoc[technical debt] is "`dealt with when we have time`", you can assume it never gets dealt with. That's a red flag for the long-term health of the codebase, and your day-to-day experience working in it.
+
+* **"`What is the balance between new development and maintenance of existing code? How much of the team's time goes on each?`"** Maintenance includes bug fixes, upgrades, and keeping the lights on. A team that can't say, or that spends most of its time firefighting, has little capacity left for building anything new. A team that never does maintenance is accruing debt that will come due. Look for a deliberate, measured split.
 
 * **"`How do you ensure delivery is sustainable and keeps costs low?`"** Listen for an answer about managing technical debt, ruthless prioritization, and saying no to low-value work – not one about working harder or adding headcount.
 
